@@ -155,3 +155,5 @@ export PATH=$PATH:/usr/sbin
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 eval "$(starship init bash)"
 export HISTTIMEFORMAT="%F %T "
+
+export PATH="$PATH:$HOME/Downloads/scrcpy"
