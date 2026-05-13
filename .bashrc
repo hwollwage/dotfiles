@@ -127,6 +127,8 @@ alias rbt="reboot"
 alias ex="exit"
 alias exi="exit"
 alias adog='git log --all --decorate --oneline --graph'
+alias h='history'
+alias src='source ~/.bashrc'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
