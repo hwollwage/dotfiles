@@ -1,13 +1,14 @@
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
 * {
     font: "JetBrainsMono Nerd Font 14";
     g-spacing: 25px;
     g-margin: 1px;
-    b-color: rgb(255, 173, 228);
+    b-color: #ff8ed9;
     fg-color: rgb(255, 255, 255);
     fgp-color: #888888FF;
     b-radius: 10px;
     g-padding: 10px;
-    hl-color: rgb(255, 184, 234);
+    hl-color: #ffb8ea;
     hlt-color: rgb(0, 0, 0);
     alt-color: rgb(17, 17, 17);
     wbg-color: #000000cc;
@@ -17,9 +18,9 @@
 }
 
 configuration {
-    modi: "drun,run,window,power:~/.config/rofi/scripts/powermenu.sh";
     show-icons: true;
-    display-drun: "";
+    display-drun: " 󰣇 ";
+    icon-theme: "Papirus";
 }
 
 
