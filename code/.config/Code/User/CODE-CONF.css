@@ -1,0 +1,16 @@
+/*/usr/share/code/resources/app/out/vs/workbench*/
+/*immutable (overriden)*/
+/*immutable append-only : sudo chattr +a /path*/
+/*lock : sudo chattr +i /path*/
+/*unlock : sudo chattr -i /path*/
+/*code top bar icon*/
+.window-appicon {
+	width: 0px;
+}
+/*code top bar title*/
+.window-title {
+	flex: 0 1 auto;
+	...;
+	
+	display: none !important;
+}

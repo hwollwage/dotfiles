@@ -1,0 +1,8 @@
+[user]
+	name = C1A1TITLE
+	email = hanzelputrawollwage@gmail.com
+[alias]
+	adog = log --all --decorate --oneline --graph
+	st = status
+[core]
+	editor = nano

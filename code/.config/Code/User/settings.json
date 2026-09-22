@@ -1,0 +1,135 @@
+{
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Fira Code'",
+    "editor.fontLigatures": true,
+    "workbench.activityBar.compact": true,
+    "chat.titleBar.signIn.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.tabSizing": "fixed",
+    "workbench.editor.enablePreview": false,
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": false,
+    "emulator.emulatorPath": "/home/edelweiss/Android/Sdk/emulator",
+    "emulator.emulatorPathLinux": "/home/edelweiss/Android/Sdk/emulator",
+    "dart.hotReloadOnSave": "allIfDirty",
+    "dart.flutterHotReloadOnSave": "allIfDirty",
+    "dart.debugExternalPackageLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "explorer.compactFolders": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.layoutControl.enabled": false,
+    "workbench.colorCustomizations": {
+        "foreground": "#ffffff",
+        "focusBorder": "#f27cb5",
+        "progressBar.background": "#f27cb5",
+        "activityBar.foreground": "#fb1e89",
+        "activityBar.inactiveForeground": "#b794a4",
+        "activityBarBadge.background": "#931e57",
+        // "tree.indentGuidesStroke":"#d7ccd2",
+        "list.dropBackground": "#f27cb5",
+        "list.highlightForeground": "#ffffff",
+        "button.background": "#de4d93",
+        "button.hoverBackground": "#aa235f",
+        "panelTitle.activeBorder": "#f27cb5",
+        "pickerGroup.border": "#f27cb5",
+        "notifications.border": "#f27cb5",
+        "notificationCenter.border": "#f27cb5",
+        "statusBar.background": "#282b32",
+        "statusBar.debuggingBackground": "#ec6aa9"
+    },
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "editor.autoIndentOnPaste": true,
+    "editor.maxTokenizationLineLength": 90000,
+    "workbench.settings.applyToAllProfiles": [],
+    "files.exclude": {
+        "**/.dart_tool": true,
+        "**/.DS_Store": true,
+        "**/.flutter-plugins": true,
+        "**/.flutter-plugins-dependencies": true,
+        "**/.git": true,
+        "**/.gradle": true,
+        "**/.pub-cache": true,
+        "**/android/.gradle": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.dart_tool/**": true,
+        "**/build/**": true,
+        "**/.gradle/**": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/build": true,
+        "**/.dart_tool": true,
+        "**/.gradle": true
+    },
+    "workbench.editorAssociations": {
+        "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
+        "*.qrc": "qt-core.qrcEditor"
+    },
+    "qt-core.additionalQtPaths": [
+        {
+            "name": "Qt-5.15.19-linux-g++-x86_64_from_PATH",
+            "path": "/usr/sbin/qmake"
+        },
+        {
+            "name": "Qt-5.15.19-linux-g++-x86_64_from_PATH",
+            "path": "/usr/sbin/qtpaths"
+        }
+    ],
+    "breadcrumbs.icons": false,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.previewFlutterUiGuides": true,
+    "cmake.environment": {
+        "PATH": "/home/edelweiss/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.46.0-linux-x64/resources/cube-cmake/linux/x86_64:/home/edelweiss/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-linux-x64/resources/binaries/linux/x86_64:${env.PATH}"
+    },
+    "debug.allowBreakpointsEverywhere": true,
+    "explorer.confirmDelete": false,
+    "workbench.experimental.modernUI": false,
+    "dart.sdkPath": "/home/edelweiss/fvm/versions/stable/bin/cache/dart-sdk",
+    "editor.suggest.triggerSuggestOnTriggerCharacters": true,
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "on",
+        "strings": "on"
+    },
+    "editor.quickSuggestionsDelay": 10,
+    "editor.suggestOnTriggerCharacters": true,
+    "chat.agent.enabled": false,
+    "update.showReleaseNotes": false,
+    "workbench.browser.showInTitleBar": false,
+    "mdb.mcp.server": "autoStartEnabled",
+    "extensions.autoUpdate": "off",
+    "update.mode": "none",
+    "accessibility.verboseChatProgressUpdates": false,
+    "platformio-ide.autoOpenPlatformIOIniFile": false,
+    "editor.inlineSuggest.showToolbar": "always",
+    "editor.inlineSuggest.enabled": false,
+    "cmake.showConfigureWithDebuggerNotification": false,
+    "terminal.integrated.initialHint": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "variable.mutable": {
+                "fontStyle": "none"
+            },
+            "function.async": {
+                "fontStyle": "none"
+            },
+            "method.async": {
+                "fontStyle": "none"
+            },
+            "function.mutable": {
+                "fontStyle": "none"
+            },
+            "method.mutable": {
+                "fontStyle": "none"
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+format = """
+$os\
+$directory\
+$character
+"""
+[os]
+disabled = false
+
+[os.symbols]
+Arch = "󰣇 "
+
+[directory]
+format = " [$path]($style) "
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+"Videos" = " "
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
