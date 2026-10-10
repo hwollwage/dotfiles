@@ -5,26 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# BRAVE SEARCH
-brave() {
-    # Jika tidak mengetik apa-apa setelah 'brave', buka halaman kosong saja
-    if [ $# -eq 0 ]; then
-        brave-browser &
-        return
-    fi
-
-    # Menggabungkan semua kata menjadi satu string pencarian yang valid untuk Google
-    local query=""
-    for word in "$@"; do
-        query="${query}+${word}"
-    done
-    query="${query#+}"
-
-    # Membuka pencarian Google di Brave Browser secara background
-    brave-browser "https://google.com{query}" &
-}
-
-
 	
 xbrave() {
 	if [ $# -eq 0 ]; then
