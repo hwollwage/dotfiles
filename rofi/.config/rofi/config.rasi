@@ -1,4 +1,5 @@
 //@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+
 * {
     font: "JetBrainsMono Nerd Font 13";
     g-spacing: 25px;
