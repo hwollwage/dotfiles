@@ -5,23 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-	
-xbrave() {
-	if [ $# -eq 0 ]; then
-		brave-browser &
-		return
-	fi
-
-	local query=""
-	for word in  "$@"; do
-		query="${query}+${word}"
-	done
-
-	query="${query#+}"
-	echo "searching brave for $@"
-	brave-browser "https://google.com{query}}" &
-}
-
 # SSH AGENT
 if [ -z "$SSH_AUTH_SOCK" ]; then
 	eval "$(ssh-agent -s)" >/dev/null
