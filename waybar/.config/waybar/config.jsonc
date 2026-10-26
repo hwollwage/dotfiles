@@ -1,0 +1,94 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "modules-left": [
+    "custom/os-icon",
+    "hyprland/workspaces", 
+    "custom/quote"
+  ],
+  "modules-center": ["custom/spotify"],
+
+  "modules-right": ["cpu", "memory", "network", "pulseaudio", "bluetooth", "battery", "clock", "tray", "custom/power"],
+  
+  "custom/quote": {
+    "format": "~ just get bangs hon ~",
+    "tooltip": false
+  },
+
+  "custom/spotify": {
+    "format": "󰝚 {}",
+    "max-length": 40,
+    "interval": 1,
+    "exec": "echo \"$(playerctl --player=spotify metadata artist) - $(playerctl --player=spotify metadata title)\" 2>/dev/null",
+    "exec-if": "pgrep spotify",
+    "on-click": "playerctl --player=spotify play-pause",
+    "on-scroll-up": "playerctl --player=spotify previous",
+    "on-scroll-down": "playerctl --player=spotify next",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "󰐥",
+    "on-click": "wlogout -C ~/.config/wlogout/style.css -l ~/.config/wlogout/layout",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "persistent-workspaces": {"1": [], "2": [], "3": [], "4": [], "5": [],}
+  },
+
+  "clock": {
+    "format": "{:%d %b %y ~ %H:%M}"
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": "  {usage}%"
+  },
+
+  "memory": {
+    "format": "  {used:0.2f}/{total:0.1f} GB"
+  },
+
+  "network": {
+    "interval": 3,
+    "format-wifi": "󰖩  {essid}",
+    "format-ethernet": "󰈀  {ifname}",
+    "format-disconnected": "󰖪 Disconnected"
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 Muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}% [X]",
+    "format-charging": "󰂋 {capacity}% [+]",
+    "format-plugged": "{icon} {capacity}% [X]",
+    "format-full": "󰂋 {capacity}% [+]",
+    "format-icons": ["󰁻", "󰁾", "󰂀", "󰂂"],
+    "interval": 5
+  }
+}

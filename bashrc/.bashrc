@@ -56,3 +56,6 @@ fi
 
 # DISABLE TERMINAL BELL
 bind 'set bell-style none'
+
+export PATH=$PATH:/home/edelweiss/.spicetify
+export PATH=$PATH:~/.spicetify

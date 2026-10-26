@@ -1,0 +1,50 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#cpu, #memory, #network, #pulseaudio, #bluetooth, #battery, #tray, #clock, #custom-power {
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+#custom-quote {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+#custom-spotify {
+  color: #ffffff;
+  padding: 0 10px;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+#waybar {
+  background-color: rgba(26,27,38,0.8);
+  color: #ffffff;
+}
+
+#workspaces {
+  padding: 5;
+  margin: 0;
+  background: transparent;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+}
+
+#workspaces button.active {
+  background-color: #f5a9b8;
+  color: #1a1b26;
+  border-radius: 4px;
+}
