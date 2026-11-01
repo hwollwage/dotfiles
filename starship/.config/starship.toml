@@ -7,7 +7,7 @@ $character
 disabled = false
 
 [os.symbols]
-Arch = "󰣇 "
+Arch = " "
 
 [directory]
 format = " [$path]($style) "
@@ -22,5 +22,5 @@ format = " [$path]($style) "
 
 [character]
 disabled = false
-success_symbol = '[❯](bold fg:green)'
-error_symbol = '[❯](bold fg:red)'
+success_symbol = '[->](bold fg:green)'
+error_symbol = '[->](bold fg:red)'

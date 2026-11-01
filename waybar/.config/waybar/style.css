@@ -5,8 +5,8 @@
 }
 
 #cpu, #memory, #network, #pulseaudio, #bluetooth, #battery, #tray, #clock, #custom-power {
-  margin-left: 9px;
-  margin-right: 9px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 #custom-quote {

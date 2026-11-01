@@ -1,0 +1,16 @@
+--#######################
+--###    MONITORS    ####
+--#######################
+
+-- .config/kanshi/config
+
+-- monitor = name, res@hz, position, scale
+-- monitor = eDP-1, 1920x1080@144, 0x0 [this is origin], 1
+-- monitor = eDP-1, 1920x1080@144, 2560x0 [right side], 1
+
+-- ANY
+-- monitor = , prefered, auto, 1
+
+--monitor = eDP-1, preferred, auto, 1
+--monitor = HDMI-A-1, preferred, auto, 1
+--monitor = eDP-1, preferred, auto, 1
