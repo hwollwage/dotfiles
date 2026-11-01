@@ -5,4 +5,4 @@
 	adog = log --all --decorate --oneline --graph
 	st = status
 [core]
-	editor = nano
+	editor = vim

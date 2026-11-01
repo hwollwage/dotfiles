@@ -9,7 +9,7 @@
   ],
   "modules-center": ["custom/spotify"],
 
-  "modules-right": ["cpu", "memory", "network", "pulseaudio", "bluetooth", "battery", "clock", "tray", "custom/power"],
+  "modules-right": ["cpu", "memory", "network", "bluetooth", "pulseaudio", "backlight", "battery", "clock", "tray", "custom/power"],
   
   "custom/quote": {
     "format": "~ just get bangs hon ~",
@@ -41,7 +41,9 @@
   },
 
   "clock": {
-    "format": "{:%d %b %y ~ %H:%M}"
+    "format": "{:%d/%m ~ %H:%M}",
+    "tooltip": true,
+    "tooltip-format": "{:%D [ %d %b %y ] ~ %H:%M}"
   },
 
   "cpu": {
@@ -50,25 +52,30 @@
   },
 
   "memory": {
-    "format": "  {used:0.2f}/{total:0.1f} GB"
+    "format": "  {used:0.1f}/{total:0.0f} GB"
   },
 
   "network": {
-    "interval": 3,
-    "format-wifi": "󰖩  {essid}",
-    "format-ethernet": "󰈀  {ifname}",
-    "format-disconnected": "󰖪 Disconnected"
+    "interval": 2,
+    "format-wifi": "󰖩 ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰖪 ",
+    "tooltip": true,
+    "tooltip-format": "SSID: [ {essid} ]\n ST: [ {signalStrength}dBm ]\n IF: [ {ifname} ]"
   },
 
-  "bluetooth": {
-    "format": " {status}",
-    "format-connected": " {device_alias}",
-    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    "tooltip-format": "{controller_alias}\t{controller_address}",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "on-click": "blueman-manager"
-  },
+"bluetooth": {
+    "format": "",
+    "format-connected": "󰂱 {num_connections}",
+    "format-connected-battery": "󰂱 {num_connections} ({device_battery_percentage}%)",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "tooltip": true,
+    "tooltip-format": "Adapter: {controller_alias}\nStatus: {status}\nConn device: {device_enumerate}",
+    "tooltip-format-connected": "Adapter: {controller_alias}\n\nConn to: {device_enumerate}",
+    "tooltip-format-enumerate-connected": ">> {device_alias}\t(Battery: {device_battery_percentage}%)",
+    "on-click": "bluetoothctl show | grep -q 'Powered: yes' && (bluetoothctl power off && rfkill block bluetooth) || (rfkill unblock bluetooth && bluetoothctl power on)"
+},
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -79,15 +86,24 @@
     "on-click": "pavucontrol"
   },
 
+  "backlight": {
+    "device": "amdgpu_b10",
+    "format": " {percent}%",
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "scroll-step": 1,
+    "interval": 2
+  },
+
   "battery": {
     "states": {
       "warning": 30,
       "critical": 15,
     },
-    "format": "{icon} {capacity}% [X]",
-    "format-charging": "󰂋 {capacity}% [+]",
-    "format-plugged": "{icon} {capacity}% [X]",
-    "format-full": "󰂋 {capacity}% [+]",
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂋 {capacity}%",
+    "format-plugged": "{icon} {capacity}%",
+    "format-full": "󰂋 {capacity}%",
     "format-icons": ["󰁻", "󰁾", "󰂀", "󰂂"],
     "interval": 5
   }
