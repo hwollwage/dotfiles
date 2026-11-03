@@ -7,7 +7,7 @@ $character
 disabled = false
 
 [os.symbols]
-Arch = " "
+Arch = "  "
 
 [directory]
 format = " [$path]($style) "
@@ -17,7 +17,6 @@ format = " [$path]($style) "
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Developer" = "󰲋 "
 "Videos" = " "
 
 [character]

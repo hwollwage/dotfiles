@@ -18,10 +18,10 @@ hl.bind(
 hl.bind("SUPER + SHIFT + O", hl.dsp.exec_cmd("pkill -9 -x kanshi; setsid kanshi >/dev/null 2>&1 &"))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 -- bind = $mainMod, C, killactive,
-hl.bind(
-	mainMod .. " + M",
-	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit")
-)
+-- hl.bind(
+-- 	mainMod .. " + 0",
+-- 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit")
+-- )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
