@@ -4,7 +4,7 @@
   font-weight: bold;
 }
 
-#cpu, #memory, #network, #pulseaudio, #bluetooth, #battery, #tray, #clock, #custom-power {
+#cpu, #memory, #network, #pulseaudio, #bluetooth, #custom-eject, #battery, #tray, #clock, #custom-power {
   margin-left: 12px;
   margin-right: 12px;
 }
@@ -27,7 +27,7 @@
 }
 
 #workspaces {
-  padding: 5;
+  padding: 1;
   margin: 0;
   background: transparent;
 }
