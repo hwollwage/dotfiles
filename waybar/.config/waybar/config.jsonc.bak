@@ -1,0 +1,130 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "modules-left": [
+    "custom/os-icon",
+    "hyprland/workspaces",
+    "custom/quote"
+  ],
+  "modules-center": ["custom/spotify"],
+
+  "modules-right": ["bluetooth", "network", "custom/eject", "pulseaudio#microphone", "pulseaudio", "backlight", "battery", "clock", "tray", "custom/power"],
+  // cpu, memory
+  "custom/quote": {
+    "format": "~ hi Oaklynn, ok troon ~",
+    "tooltip": false
+  },
+
+  "custom/spotify": {
+    "format": "󰝚 {}",
+    "max-length": 40,
+    "interval": 1,
+    "exec": "echo \"$(playerctl --player=spotify metadata artist) - $(playerctl --player=spotify metadata title)\" 2>/dev/null",
+    "exec-if": "pgrep spotify",
+    "on-click": "playerctl --player=spotify play-pause",
+    "on-scroll-up": "playerctl --player=spotify previous",
+    "on-scroll-down": "playerctl --player=spotify next",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "󰐥 ",
+    "on-click": "wlogout -C ~/.config/wlogout/style.css -l ~/.config/wlogout/layout",
+    "tooltip": false
+  },
+
+  "custom/eject": {
+    "format": " ",
+    "exec": "lsblk -no MOUNTPOINTS /dev/sda1 | grep -q / && echo '{\"text\": \"   Eject Ventoy\", \"tooltip\": \"Status: MOUNTED\\nclick to unmount\", \"class\": \"mounted\"}' || echo '{\"text\": \"\", \"tooltip\": \"Status: SAFE TO PULL\", \"class\": \"unmounted\"}'",
+    "return-type": "json",
+    "interval": 2,
+    "on-click": "udiskie-umount /dev/sda1 && udisksctl power-off -b /dev/sda && notify-send Pendrive unmounted",
+    "tooltip": true
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "persistent-workspaces": {"1": [], "2": [], "3": [], "4": [], "5": [],}
+  },
+
+  "clock": {
+    "format": "{:%d/%m ~ %H:%M}",
+    "tooltip": true,
+    "tooltip-format": "{:%D [ %d %b %y ] ~ %H:%M}",
+    "on-click": "gsimplecal"
+  },
+
+  // "cpu": {
+  //   "interval": 2,
+  //   "format": "  {usage}%"
+  // },
+
+  // "memory": {
+  //   "format": "  {used:0.1f}/{total:0.0f} GB"
+  // },
+
+  "network": {
+    "interval": 2,
+    "format-wifi": "󰖩 ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰖪 ",
+    "tooltip": true,
+    "tooltip-format": "SSID: [ {essid} ]\n ST: [ {signalStrength}dBm ]\n IF: [ {ifname} ]"
+  },
+
+  "bluetooth": {
+    "format": "󰂯",
+    "format-connected": "󰂱 ",
+    "format-connected-battery": "󰂱 {device_battery_percentage}%",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "tooltip": true,
+    "tooltip-format": "Adapter: {controller_alias}\nStatus: {status}\nConn device: {device_enumerate}",
+    "tooltip-format-connected": "Adapter: {controller_alias}\nConn to: {device_enumerate}",
+    "tooltip-format-enumerate-connected": ">> {device_alias}\nBattery: {device_battery_percentage}%",
+    "on-click": "bluetoothctl show | grep -q 'Powered: yes' && (bluetoothctl power off && rfkill block bluetooth) || (rfkill unblock bluetooth && bluetoothctl power on)"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 Muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "󰍬",
+    "format-source-muted": "󰍭",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+
+  "backlight": {
+    "device": "amdgpu_b10",
+    "format": " {percent}%",
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "on-click-right": "current=$(brightnessctl -d tpacpi::kbd_backlight g); if [ \"$current\" -eq 2 ]; then brightnessctl -d tpacpi::kbd_backlight s 0; else brightnessctl -d tpacpi::kbd_backlight s +1; fi",
+    "scroll-step": 1,
+    "interval": 2
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂋 {capacity}%",
+    "format-plugged": "{icon} {capacity}%",
+    "format-full": "󰂋 {capacity}%",
+    "format-icons": ["󰁻", "󰁾", "󰂀", "󰂂"],
+    "interval": 5
+  }
+}
