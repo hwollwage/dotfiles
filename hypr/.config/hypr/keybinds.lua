@@ -9,13 +9,26 @@ local terminal = "kitty"
 local fileManager = "dolphin"
 local menu = "hyprlauncher"
 
+-- hl.bind(
+-- 	"SUPER + SHIFT + P",
+-- 	hl.dsp.exec_cmd(
+-- 		'pkill -9 -x kanshi; sleep 0.3; hyprctl keyword monitor "eDP-1, preferred, auto, 1"; sleep 1; hyprctl keyword monitor "eDP-1, 1920x1080@60, 0x0, 1, mirror, HDMI-A-1"'
+-- 	)
+-- )
+-- hl.bind("SUPER + SHIFT + O", hl.dsp.exec_cmd("pkill -9 -x kanshi; setsid kanshi >/dev/null 2>&1 &"))
+
 hl.bind(
 	"SUPER + SHIFT + P",
 	hl.dsp.exec_cmd(
-		'pkill -9 -x kanshi; sleep 0.3; hyprctl keyword monitor "eDP-1, preferred, auto, 1"; sleep 1; hyprctl keyword monitor "eDP-1, 1920x1080@60, 0x0, 1, mirror, HDMI-A-1"'
+		[[pkill -x kanshi; sleep 0.3; hyprctl eval 'hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "0x0", scale = 1 })'; sleep 1; hyprctl eval 'hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "0x0", scale = 1, mirror = "HDMI-A-1" })']]
 	)
 )
-hl.bind("SUPER + SHIFT + O", hl.dsp.exec_cmd("pkill -9 -x kanshi; setsid kanshi >/dev/null 2>&1 &"))
+
+hl.bind(
+	"SUPER + SHIFT + O",
+	hl.dsp.exec_cmd([[hyprctl reload; pkill -x kanshi; sleep 0.5; setsid kanshi >/dev/null 2>&1 &]])
+)
+
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 -- bind = $mainMod, C, killactive,
 -- hl.bind(
@@ -79,4 +92,4 @@ hl.bind(mainMod .. " + ALT + down", hl.dsp.window.swap({ direction = "d" }))
 hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- emote
-hl.bind(mainMod .. " + period", hl.dsp.window.exec_cmd("emote"))
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("emote"))

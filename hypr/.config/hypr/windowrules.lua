@@ -12,7 +12,7 @@ hl.layer_rule({
 
 -- rofi animation
 hl.layer_rule({
-	match = { namespace = "match:namespace rofi" },
+	match = { namespace = "rofi" },
 	animation = "slide",
 })
 
