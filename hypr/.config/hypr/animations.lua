@@ -9,7 +9,7 @@ hl.curve("fast", { type = "bezier", points = { { 0.1, 1 }, { 0.1, 1 } } })
 hl.animation({
 	leaf = "windows",
 	enabled = true,
-	speed = 2,
+	speed = 1,
 	bezier = "fast",
 	style = "slide right",
 })
@@ -17,7 +17,7 @@ hl.animation({
 hl.animation({
 	leaf = "workspaces",
 	enabled = true,
-	speed = 4,
+	speed = 1,
 	bezier = "default",
 	style = "slide",
 })
