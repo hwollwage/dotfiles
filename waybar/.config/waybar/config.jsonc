@@ -9,23 +9,24 @@
   ],
   "modules-center": ["custom/spotify"],
 
-  "modules-right": ["custom/touchscreen", "bluetooth", "network", "custom/eject", "pulseaudio#microphone", "pulseaudio", "backlight", "battery", "clock", "tray", "custom/power"],
+  "modules-right": ["custom/touchscreen", "bluetooth", "network", "custom/eject", "pulseaudio#microphone", "pulseaudio", "backlight", "battery", "clock", "custom/notification", "tray", "custom/power"],
   // cpu, memory
   "custom/quote": {
     "format": "~ hi Oaklynn, ok troon ~",
     "tooltip": false
   },
 
-  // "custom/touchscreen": {
-  //   "format": "󰝁",
-  //   "exec": "$HOME/.config/hypr/scripts/touch_screen.sh",
-  //   "on-click": "$HOME/.config/hypr/scripts/touch_screen.sh",
-  //   "interval": "2",
-  //   "on-click-right": "killall -SIGUSR2 waybar",
-  //   "return-type": "json",
-  //   "tooltip": true
-  // },
-  //
+  "custom/notification": {
+    "format": "",
+    "escape": true,
+    "return-type": "json",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "restart-interval": 2,
+    "tooltip": true,
+    "tooltip-format": "{} notification"
+  },
 
   "custom/touchscreen": {
     "exec": "$HOME/.config/hypr/scripts/touch_screen.sh",

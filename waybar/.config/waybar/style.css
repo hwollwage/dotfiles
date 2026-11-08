@@ -4,7 +4,7 @@
   font-weight: bold;
 }
 
-#cpu, #memory, #network, #pulseaudio, #pulseaudio\.microphone, #bluetooth, #custom-eject, #battery, #tray, #clock, #custom-power, #custom-touchscreen {
+#cpu, #memory, #network, #pulseaudio, #pulseaudio\.microphone, #bluetooth, #custom-eject, #battery, #tray, #clock, #custom-power, #custom-touchscreen, #custom-notification {
   margin-left: 12px;
   margin-right: 12px;
 }

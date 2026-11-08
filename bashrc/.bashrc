@@ -12,6 +12,11 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
   ssh-add ~/.ssh/hwollwage-gitlab >/dev/null 2>&1
 fi
 
+# ENABLE BASH COMPLETION
+if [[ -r /usr/share/bash-completion/bash_completion ]]; then
+  . /usr/share/bash-completion/bash_completion
+fi
+
 # ALIASES
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -36,6 +41,12 @@ alias ..='cd ..'
 
 PS1='[\u@\h \W]\$ '
 
+# EVAL
+eval "$(starship init bash)"
+
+# DISABLE TERMINAL BELL
+bind 'set bell-style none'
+
 # EXPORT PATH
 export HISTTIMEFORMAT="%A %d %B %Y %T  "
 export HISTSIZE=-1
@@ -48,17 +59,5 @@ export PATH="$PATH:$HOME/.platformio/penv/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export LIBCLANG_PATH="/home/edelweiss/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-20.1.1_20250829/esp-clang/lib"
 export PATH="/home/edelweiss/.rustup/toolchains/esp/xtensa-esp-elf/esp-15.2.0_20250920/xtensa-esp-elf/bin:$PATH"
-
-# EVAL
-eval "$(starship init bash)"
-
-# ENABLE BASH COMPLETION
-if [[ -r /usr/share/bash-completion/bash_completion ]]; then
-  . /usr/share/bash-completion/bash_completion
-fi
-
-# DISABLE TERMINAL BELL
-bind 'set bell-style none'
-
 export PATH=$PATH:/home/edelweiss/.spicetify
 export PATH=$PATH:~/.spicetify
