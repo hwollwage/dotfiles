@@ -6,5 +6,12 @@ return {
     image = {
       enabled = true,
     },
+    picker = {
+      sources = {
+        files = {
+          hidden = true,
+        },
+      },
+    },
   },
 }

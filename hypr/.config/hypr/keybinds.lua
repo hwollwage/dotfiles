@@ -6,25 +6,14 @@ local mainMod = "SUPER"
 local terminal = "kitty"
 local fileManager = "dolphin"
 local menu = "hyprlauncher"
+local mon = require("monitors")
 
-hl.bind(
-	"SUPER + SHIFT + P",
-	hl.dsp.exec_cmd(
-		[[pkill -x kanshi; sleep 0.3; hyprctl eval 'hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "0x0", scale = 1 })'; sleep 1; hyprctl eval 'hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "0x0", scale = 1, mirror = "HDMI-A-1" })']]
-	)
-)
+hl.bind("SUPER + SHIFT + O", mon.mirror_if_connected)
+hl.bind("SUPER + SHIFT + P", mon.external_if_connected)
 
-hl.bind(
-	"SUPER + SHIFT + O",
-	hl.dsp.exec_cmd([[hyprctl reload; pkill -x kanshi; sleep 0.5; setsid kanshi >/dev/null 2>&1 &]])
-)
+hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd("wlogout"))
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
--- bind = $mainMod, C, killactive,
--- hl.bind(
--- 	mainMod .. " + 0",
--- 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit")
--- )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
