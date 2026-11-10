@@ -6,3 +6,6 @@ vim.keymap.set("n", "<C-M-Left>", ":bprev<CR>", { silent = true, desc = "switch 
 vim.keymap.set("n", "<C-M-Right>", ":bnext<CR>", { silent = true, desc = "switch right tab w/ ctrl+arrowRight" })
 vim.keymap.set("n", "<C-M-h>", ":bprev<CR>", { silent = true, desc = "switch left tab with L" })
 vim.keymap.set("n", "<C-M-l>", ":bnext<CR>", { silent = true, desc = "switch right tab with L" })
+
+vim.keymap.set("n", "<C-M-h>", ":bnext<CR>", { silent = true, desc = "switch right tab w/ ctrl+arrowRight" })
+vim.keymap.set("n", "<C-M-l>", ":bnext<CR>", { silent = true, desc = "switch right tab w/ ctrl+arrowRight" })

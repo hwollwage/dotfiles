@@ -6,10 +6,6 @@ local mainMod = "SUPER"
 local terminal = "kitty"
 local fileManager = "dolphin"
 local menu = "hyprlauncher"
-local mon = require("monitors")
-
-hl.bind("SUPER + SHIFT + O", mon.mirror_if_connected)
-hl.bind("SUPER + SHIFT + P", mon.external_if_connected)
 
 hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd("wlogout"))
 
