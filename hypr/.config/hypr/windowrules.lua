@@ -21,6 +21,6 @@ hl.window_rule({
 		class = "^(com\\.github\\.hluk\\.copyq)$",
 	},
 	float = true,
-	size = "400 500",
+	size = "600 700",
 	move = "35% 30%",
 })
