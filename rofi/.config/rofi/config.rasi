@@ -20,7 +20,8 @@
 
 configuration {
     show-icons: true;
-    display-drun: " 󰣇 ";
+    // display-drun: " 󰣇 ";
+    display-drun: "t4t";
     icon-theme: "Papirus";
 }
 
@@ -58,7 +59,7 @@ inputbar {
 }
 
 entry {
-    placeholder: " Jarvis, find the software...";
+    placeholder: " what u tryna find troon ?";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
 }
