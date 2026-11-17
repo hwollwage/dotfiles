@@ -5,15 +5,16 @@
   "modules-left": [
     "custom/os-icon",
     "hyprland/workspaces",
-    "custom/quote"
+    "custom/quotes"
   ],
   "modules-center": ["custom/spotify"],
 
   "modules-right": ["custom/touchscreen", "bluetooth", "network", "custom/eject", "pulseaudio#microphone", "pulseaudio", "backlight", "battery", "clock", "custom/notification", "tray", "custom/power"],
-  // cpu, memory
-  "custom/quote": {
-    "format": "~ hi Oaklynn, ok troon ~",
-    "tooltip": false
+
+  "custom/quotes": {
+    "format": "{}",
+    "tooltip": false,
+    "exec": "~/.config/waybar/scripts/quotes.sh"
   },
 
   "custom/notification": {
