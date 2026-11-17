@@ -20,7 +20,7 @@ hl.bind(mainMod .. " + B", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("copyq toggle"))
-
+hl.bind("SUPER + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 -- wireplumber / wpctl
 hl.bind(
 	"XF86AudioRaiseVolume",
@@ -39,7 +39,7 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ to
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set 5%+"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"), { locked = true, repeating = true })
 
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region -o /home/edelweiss/Pictures/Screenshots_hypr/"))
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region --freeze -o /home/edelweiss/Pictures/Screenshots_hypr/"))
 hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- emoji
