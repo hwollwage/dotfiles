@@ -43,6 +43,7 @@ PS1='[\u@\h \W]\$ '
 
 # EVAL
 eval "$(starship init bash)"
+eval "$(fzf --bash)"
 
 # DISABLE TERMINAL BELL
 bind 'set bell-style none'

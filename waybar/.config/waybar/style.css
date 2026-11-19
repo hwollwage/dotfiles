@@ -48,3 +48,7 @@
   color: #1a1b26;
   border-radius: 4px;
 }
+
+tooltip label {
+  font-size: 16px;
+}

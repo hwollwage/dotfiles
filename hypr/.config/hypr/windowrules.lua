@@ -24,3 +24,39 @@ hl.window_rule({
 	size = "600 700",
 	move = "35% 30%",
 })
+
+hl.window_rule({
+	match = {
+		class = "xdg-desktop-portal-gtk",
+	},
+	float = true,
+	-- size = "1280 720",
+	center = true,
+})
+
+hl.window_rule({
+	match = {
+		class = "^(floating-nmtui)$",
+	},
+	float = true,
+	size = { 600, 500 },
+	center = true,
+})
+
+hl.window_rule({
+	match = {
+		class = "^(org.kde.gwenview)$",
+	},
+	float = true,
+	size = "1280 720",
+	center = true,
+})
+
+hl.window_rule({
+	match = {
+		class = "org.pulseaudio.pavucontrol",
+	},
+	float = true,
+	size = "800 700",
+	center = true,
+})

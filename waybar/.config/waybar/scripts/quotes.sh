@@ -4,6 +4,9 @@ quotes=(
   "~ hi Oaklynn, ok troon ~"
   "~ just get bangs hon ~"
   "~ midwest emo sucks, but so do i ~"
+  "~ twin size mattress ~"
+  "~ /tttt/ ¿¿ ~"
+  "~ your deep rest ~"
 )
 
 while true; do
