@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", RUN+="/usr/local/bin/usb-notify.sh add '$env{ID_MODEL}'"
+ACTION=="remove", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", RUN+="/usr/local/bin/usb-notify.sh remove '$env{ID_MODEL}'"

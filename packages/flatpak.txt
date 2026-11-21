@@ -1,2 +1,1 @@
-net.openra.OpenRA
 org.vinegarhq.Sober

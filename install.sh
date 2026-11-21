@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# sudo cp ~/dotfiles/scripts/usb-notify.sh /usr/local/bin/ for future rules.d
 
 set -e
 
@@ -16,36 +17,35 @@ cd "$DOTFILES_DIR"
 PACKAGES_DIR = "$DOTFILES_DIR/packages"
 
 if [ -d "$PACKAGES_DIR" ]; then
-    echo -e "${BLUE}[*] initializing packages...${NC}"
+  echo -e "${BLUE}[*] initializing packages...${NC}"
 
-    # pacman
-    if [ -f "$PACKAGEES_DIR/pacman.txt" ]; then
-        echo -e "${YELLOW}[->] installing from pacman repo...${NC}"
-        sudo pacman -S --needed --noconfirm - < "$PACKAGES_DIR/pacman.txt"
-    fi
+  # pacman
+  if [ -f "$PACKAGEES_DIR/pacman.txt" ]; then
+    echo -e "${YELLOW}[->] installing from pacman repo...${NC}"
+    sudo pacman -S --needed --noconfirm - <"$PACKAGES_DIR/pacman.txt"
+  fi
 
-    # yay (AUR)
-    if [ -f "$PACKAGES_DIR/aur.txt" ]; then
-        echo -e "${YELLOW}[->] checking AUR helper...${NC}"
-        sudo pacman -S --needed --noconfirm git base-devel
-        git clone https://archlinux.org /tmp/yay
-        cd /tmp/yay && makepkg -si --noconfirm
-        cd "$DOTFILES_DIR"
-    fi
-    echo -e "${YELLOW}[->] installing app from AUR...${NC}"
-    yay -S --needed --noconfirm - < "$PACKAGES_DIR/aur.txt"
+  # yay (AUR)
+  if [ -f "$PACKAGES_DIR/aur.txt" ]; then
+    echo -e "${YELLOW}[->] checking AUR helper...${NC}"
+    sudo pacman -S --needed --noconfirm git base-devel
+    git clone https://archlinux.org /tmp/yay
+    cd /tmp/yay && makepkg -si --noconfirm
+    cd "$DOTFILES_DIR"
+  fi
+  echo -e "${YELLOW}[->] installing app from AUR...${NC}"
+  yay -S --needed --noconfirm - <"$PACKAGES_DIR/aur.txt"
 
-    # flatpak
-    if [ -f "$PACKAGES_DIR/flatpak.txt" ]; then
-        echo -e "${YELLOW}[->] checking flatpak...${NC}"
-        if ! command -v flatpak &> /dev/null; then
-            sudo pacman -S --noconfirm flatpak
-        fi
-        echo -e "${YELLOW}[->] installing flatpak app...${NC}"
-        while read -r app; do
-            [ -z "$app" ] && continue
-            flatpak install --user --y --noninteractive flathub "$app" || true
-        done < "$PACKAGE_DIR/flatpak.txt"
+  # flatpak
+  if [ -f "$PACKAGES_DIR/flatpak.txt" ]; then
+    echo -e "${YELLOW}[->] checking flatpak...${NC}"
+    if ! command -v flatpak &>/dev/null; then
+      sudo pacman -S --noconfirm flatpak
     fi
+    echo -e "${YELLOW}[->] installing flatpak app...${NC}"
+    while read -r app; do
+      [ -z "$app" ] && continue
+      flatpak install --user --y --noninteractive flathub "$app" || true
+    done <"$PACKAGE_DIR/flatpak.txt"
+  fi
 fi
-

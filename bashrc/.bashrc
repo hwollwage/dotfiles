@@ -38,7 +38,8 @@ alias RST='reset'
 alias cls='clear'
 alias logout='hyprctl dispatch exit'
 alias ..='cd ..'
-
+alias ...='cd ../../'
+alias ....='cd ../../../'
 PS1='[\u@\h \W]\$ '
 
 # EVAL
@@ -49,10 +50,11 @@ eval "$(fzf --bash)"
 bind 'set bell-style none'
 
 # EXPORT PATH
-export HISTTIMEFORMAT="%A %d %B %Y %T  "
+export HISTTIMEFORMAT="%d %b %H:%M  "
 export HISTSIZE=-1
 export HISTFILESIZE=-1
-export SAVEHIST=999999999
+export HISTCONTROL=ignoreboth
+
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/fvm/default/bin"
