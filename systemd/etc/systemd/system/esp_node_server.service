@@ -1,0 +1,22 @@
+[Unit]
+Description=ESP NODE SERVER
+After=network.target
+
+[Service]
+User=edelweiss
+Group=edelweiss
+
+WorkingDirectory=/home/oaklynn/esp32_project/server
+
+ExecStart=/usr/bin/node server.js
+
+Restart=always
+RestartSec=10
+
+StandardOutput=syslog
+StandardInput=null
+StandardError=syslog
+SyslogIdentifier=ESP_NODE_SERVER
+
+[Install]
+WantedBy=multi-user.target

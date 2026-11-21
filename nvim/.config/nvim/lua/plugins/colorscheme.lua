@@ -5,9 +5,9 @@ return {
     priority = 1000,
     config = function()
       require("catppuccin").setup({
-        flavour = "mocha",
+        flavour = "macchiato",
         color_overrides = {
-          mocha = {
+          macchiato = {
             text = "#FFFFFF",
             blue = "#F5A9B8",
             sky = "#F5A9B8",
@@ -21,7 +21,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin-macchiato",
     },
   },
 }

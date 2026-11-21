@@ -5,7 +5,7 @@ quotes=(
   "~ just get bangs hon ~"
   "~ midwest emo sucks, but so do i ~"
   "~ twin size mattress ~"
-  "~ /tttt/ ¿¿ ~"
+  "~ /tttt/ ¿ ~"
   "~ your deep rest ~"
 )
 

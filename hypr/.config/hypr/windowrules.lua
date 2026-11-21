@@ -9,10 +9,16 @@ hl.layer_rule({
 })
 
 -- rofi animation
-
 hl.layer_rule({
 	match = { namespace = "rofi" },
 	animation = "slide",
+})
+
+hl.animation({
+	leaf = "layers",
+	enabled = true,
+	speed = 0.5,
+	bezier = "default",
 })
 
 -- copyq rules float, size, pos
@@ -25,6 +31,49 @@ hl.window_rule({
 	move = "35% 30%",
 })
 
+-- display picker (obs, zoom, etc)
+hl.window_rule({
+	match = {
+		class = "hyprland-share-picker",
+	},
+	float = true,
+	size = "400 500",
+	center = true,
+})
+
+-- archive manager fileroller
+hl.window_rule({
+	match = {
+		class = "org.gnome.FileRoller",
+	},
+	float = true,
+	size = "800 600",
+	center = true,
+})
+
+-- pip brave
+hl.window_rule({
+	match = {
+		class = "^(brave-browser)$",
+		title = "(?i).*picture[- ]in[- ]picture.*",
+	},
+	float = true,
+	size = "450 255",
+	center = true,
+	pin = true,
+})
+
+-- kde passwd popup
+hl.window_rule({
+	match = {
+		class = "org.kde.kded6",
+	},
+	float = true,
+	size = "800 600",
+	center = true,
+})
+
+-- file picker popup
 hl.window_rule({
 	match = {
 		class = "xdg-desktop-portal-gtk",
@@ -34,6 +83,7 @@ hl.window_rule({
 	center = true,
 })
 
+-- floating nmtui
 hl.window_rule({
 	match = {
 		class = "^(floating-nmtui)$",
@@ -43,6 +93,7 @@ hl.window_rule({
 	center = true,
 })
 
+-- gwenview img
 hl.window_rule({
 	match = {
 		class = "^(org.kde.gwenview)$",
@@ -52,6 +103,7 @@ hl.window_rule({
 	center = true,
 })
 
+-- audio controll
 hl.window_rule({
 	match = {
 		class = "org.pulseaudio.pavucontrol",

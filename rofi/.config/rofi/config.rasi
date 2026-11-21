@@ -4,7 +4,7 @@
     font: "JetBrainsMono Nerd Font 13";
     g-spacing: 25px;
     g-margin: 1px;
-    b-color: #ff8ed9;
+    b-color: #F5A9B8;
     fg-color: rgb(255, 255, 255);
     fgp-color: #888888FF;
     b-radius: 10px;

@@ -1,7 +1,5 @@
-android-studio
 anydesk-bin
 archlinux-java-run
-arduino-ide-bin
 brave-bin
 circuitjs-bin
 dynamips
@@ -16,13 +14,9 @@ packettracer
 postman-bin
 psad
 qdiskinfo
-rustdesk
 snort
 spotify
-stm32cubemx
-ttf-ms-fonts
 ubridge
-visual-studio-code-bin
 vpcs
 winbox
 yay

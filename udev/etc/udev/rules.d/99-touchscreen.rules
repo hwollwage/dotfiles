@@ -1,0 +1,1 @@
+ACTION=="add|change", SUBSYSTEM=="input", ATTR{name}=="ELAN901C:00 04F3:2A3B", RUN+="/bin/chmod 666 /sys%p/inhibited"

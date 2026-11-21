@@ -65,14 +65,27 @@ hl.bind("SUPER + left", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + right", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + up", hl.dsp.focus({ direction = "up" }))
 hl.bind("SUPER + down", hl.dsp.focus({ direction = "down" }))
+-- switch focus pip
+hl.bind(mainMod .. " + Left", function()
+	local window = hl.get_active_window()
+	if window and window.floating then
+		hl.dispatch(hl.dsp.window.cycle_next({ tiled = true }))
+	else
+		hl.dispatch(hl.dsp.focus({ direction = "left" }))
+	end
+end)
+hl.bind(mainMod .. " + h", function()
+	local window = hl.get_active_window()
+	if window and window.floating then
+		hl.dispatch(hl.dsp.window.cycle_next({ tiled = true }))
+	else
+		hl.dispatch(hl.dsp.focus({ direction = "left" }))
+	end
+end)
 
 hl.bind(mainMod .. " + Page_up", hl.dsp.focus({ workspace = "r+1" }))
 hl.bind(mainMod .. " + Page_down", hl.dsp.focus({ workspace = "r-1" }))
 
--- hl.bind(mainMod .. " + CTRL + h", hl.dsp.focus({ workspace = "-1" }))
--- hl.bind(mainMod .. " + CTRL + l", hl.dsp.focus({ workspace = "+1" }))
--- hl.bind(mainMod .. " + CTRL + Right", hl.dsp.focus({ workspace = "+1" }))
--- hl.bind(mainMod .. " + CTRL + Left", hl.dsp.focus({ workspace = "-1" }))
 hl.bind(mainMod .. " + SHIFT + Right", hl.dsp.window.move({ workspace = "+1" }))
 hl.bind(mainMod .. " + SHIFT + Left", hl.dsp.window.move({ workspace = -1 }))
 

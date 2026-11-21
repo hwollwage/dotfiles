@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Tozo Aerosound Bluetooth
+Exec=bluetoothctl connect 94:4B:F8:74:1F:68
+Icon=audio-headphones
+Terminal=false
+
