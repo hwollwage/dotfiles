@@ -10,4 +10,10 @@ hl.config({
 		},
 		sensitivity = -0.1,
 	},
+	cursor = {
+		no_hardware_cursors = 1,
+	},
+	misc = {
+		vrr = 0,
+	},
 })

@@ -1,0 +1,64 @@
+bash-completion
+hyprland
+7zip
+cn-jp-kr-font
+gsimpcelcal
+base-devel
+brightnessctl usbutils
+cava
+copyq
+file-roller
+discord
+hypridle hyprlock hyprpaper hyprpicker hyprshot
+pipewire wireplumber pavucontrol
+bluez bluez-utils
+kitty
+gimp kolourpaint
+docker
+fastfetch hyfetch htop
+cups hplip hp print
+thunar
+dolphin
+gparted
+gwenview
+kate
+scrcpy
+ly lockscreen
+libreoffice-fresh
+dns dhcp client net-tools nmap tcpdump wireshark
+kamaso obs studio
+fvm flutter nodejs ansible python php php-fpm phph-pgsql php-sqlite phpmyadmin nginx , nodejs, (DOCKER) _> pgadmin4, mongodb, mysql, ngin, phpmyadmin, postgres, redis, ubuntu, postgresql
+nano nvim vim
+gns3-gui gns3-server libvirt ubridge dynamips vpcs
+tldr
+xdg-desktop-portal qt6-wayland
+zram-generator
+zip
+flatpak _ sober roblox
+telegrarm
+samba
+rofi
+scrcpy
+stow
+git-crypt
+cpu-x
+pacseek
+github-cli
+qalculate-gtk
+samba
+rofi
+scrcpy
+stow
+timeshift
+ttf-firacode jetbrainmono NERD
+virtual box
+waybar
+tmux
+yt-dlp
+k-alarm ???
+wine wine-mono wine-gecko winetricks
+starship
+swaync
+wlogout
+archlinux-java-run
+bat
