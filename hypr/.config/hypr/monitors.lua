@@ -2,10 +2,11 @@
 --###    MONITORS    ####
 --#######################
 
---#######################
---###    MONITORS    ####
---#######################
-
+hl.config({
+	render = {
+		cm_auto_hdr = 0,
+	},
+})
 local is_mirrored = false
 
 local hdmi_opts = {
@@ -13,6 +14,8 @@ local hdmi_opts = {
 	mode = "1920x1080@100",
 	position = "auto",
 	scale = 1,
+	bitdepth = 10,
+	cm = "srgb",
 }
 
 local ensure_ui_cmd = [[

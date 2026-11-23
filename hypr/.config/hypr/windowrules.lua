@@ -16,6 +16,14 @@ hl.window_rule({
 	move = "35% 30%",
 })
 
+-- dolphin prop
+hl.window_rule({
+	match = { class = "^(org\\.kde\\.dolphin)$", title = "^(Properties for .*)$" },
+	float = true,
+	size = "400 500",
+	center = true,
+})
+
 -- display picker (obs, zoom, etc)
 hl.window_rule({ match = { class = "hyprland-share-picker" }, float = true, size = "400 500", center = true })
 -- archive manager fileroller
