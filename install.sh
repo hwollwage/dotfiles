@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# sudo stow --no-folding -v -d ~/dotfiles -t /etc etc
 # sudo cp ~/dotfiles/scripts/usb-notify.sh /usr/local/bin/ for future rules.d
 
 set -e

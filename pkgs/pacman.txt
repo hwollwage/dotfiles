@@ -10,7 +10,7 @@ copyq
 file-roller
 discord
 hypridle hyprlock hyprpaper hyprpicker hyprshot
-pipewire wireplumber pavucontrol
+pipewire wireplumber pavucontrol gst-plugins-base gst-plugins-good gnome-clocks
 bluez bluez-utils
 kitty
 gimp kolourpaint

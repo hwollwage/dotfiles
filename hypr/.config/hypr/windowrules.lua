@@ -16,19 +16,6 @@ hl.window_rule({
 	move = "35% 30%",
 })
 
--- dolphin prop
-hl.window_rule({
-	match = { class = "^(org\\.kde\\.dolphin)$", title = "^(Properties for .*)$" },
-	float = true,
-	size = "400 500",
-	center = true,
-})
-
--- display picker (obs, zoom, etc)
-hl.window_rule({ match = { class = "hyprland-share-picker" }, float = true, size = "400 500", center = true })
--- archive manager fileroller
-hl.window_rule({ match = { class = "org.gnome.FileRoller" }, float = true, size = "800 600", center = true })
-
 -- pip brave
 hl.window_rule({
 	match = { class = "^(brave-browser)$", title = "(?i).*picture[- ]in[- ]picture.*" },
@@ -38,6 +25,23 @@ hl.window_rule({
 	pin = true,
 })
 
+-- dolphin prop
+hl.window_rule({
+	match = { class = "^(org\\.kde\\.dolphin)$", title = "^(Properties for .*)$" },
+	float = true,
+	size = "400 500",
+	center = true,
+})
+-- gnome clocks / alarm
+hl.window_rule({ match = { class = "org.gnome.clocks" }, float = true, size = "400 500", center = true })
+-- display picker (obs, zoom, etc)
+hl.window_rule({ match = { class = "hyprland-share-picker" }, float = true, size = "400 500", center = true })
+-- archive manager fileroller
+hl.window_rule({ match = { class = "org.gnome.FileRoller" }, float = true, size = "800 600", center = true })
+-- mpv music player
+hl.window_rule({ match = { class = "mpv-music" }, float = true, size = "260 260", center = true, pin = true })
+-- mpv video player
+hl.window_rule({ match = { class = "mpv" }, float = true, size = "1280 720", center = true, pin = true })
 -- kde passwd popup
 hl.window_rule({ match = { class = "org.kde.kded6" }, float = true, size = "800 600", center = true })
 -- file picker popup
