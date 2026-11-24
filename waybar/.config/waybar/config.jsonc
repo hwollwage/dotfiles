@@ -40,11 +40,11 @@
     "format": "󰝚 {}",
     "max-length": 40,
     "interval": 1,
-    "exec": "echo \"$(playerctl --player=spotify metadata artist) - $(playerctl --player=spotify metadata title)\" 2>/dev/null",
-    "exec-if": "pgrep spotify",
-    "on-click": "playerctl --player=spotify play-pause",
-    "on-scroll-up": "playerctl --player=spotify previous",
-    "on-scroll-down": "playerctl --player=spotify next",
+    "exec": "playerctl --player=spotify,mpv metadata --format '{{ artist }} ~ {{ title }}' | sed 's/^ - //'",
+    "exec-if": "playerctl --player=spotify,mpv status 2>/dev/null | grep -qE 'Playing|Paused'",
+    "on-click": "playerctl --player=spotify,mpv play-pause",
+    "on-scroll-up": "playerctl --player=spotify,mpv previous",
+    "on-scroll-down": "playerctl --player=spotify,mpv next",
     "tooltip": false
   },
 
@@ -76,15 +76,6 @@
     "tooltip": false,
     "on-click": "wlogout"
   },
-
-  // "cpu": {
-  //   "interval": 2,
-  //   "format": "  {usage}%"
-  // },
-
-  // "memory": {
-  //   "format": "  {used:0.1f}/{total:0.0f} GB"
-  // },
 
   "network": {
     "interval": 2,
@@ -151,3 +142,12 @@
     "interval": 5
   }
 }
+
+// "cpu": {
+//   "interval": 2,
+//   "format": "  {usage}%"
+// },
+
+// "memory": {
+//   "format": "  {used:0.1f}/{total:0.0f} GB"
+// },

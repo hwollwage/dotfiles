@@ -13,7 +13,14 @@ hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("copyq toggle"))
 hl.bind("SUPER + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind("SUPER + 0", hl.dsp.exec_cmd("wlogout"))
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region --freeze -o /home/edelweiss/Pictures/Screenshots_hypr/"))
+hl.bind(
+	"PRINT",
+	hl.dsp.exec_cmd(
+		'sh -c "pkill slurp; pkill hyprpicker; hyprshot -m region --freeze -o ~/Pictures/Screenshots_hypr/"'
+	)
+)
+
+hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + period", hl.dsp.exec_cmd("emote"))
 
@@ -79,19 +86,11 @@ hl.bind(
 )
 
 -- switch focus picture-in-picture (pip)
-hl.bind("SUPER + Left", function()
+hl.bind("SUPER + Control_R", function()
 	local window = hl.get_active_window()
 	if window and window.floating then
 		hl.dispatch(hl.dsp.window.cycle_next({ tiled = true }))
 	else
-		hl.dispatch(hl.dsp.focus({ direction = "left" }))
-	end
-end)
-hl.bind("SUPER + H", function()
-	local window = hl.get_active_window()
-	if window and window.floating then
-		hl.dispatch(hl.dsp.window.cycle_next({ tiled = true }))
-	else
-		hl.dispatch(hl.dsp.focus({ direction = "left" }))
+		hl.dispatch(hl.dsp.focus({ window = "floating" }))
 	end
 end)
