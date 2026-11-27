@@ -5,7 +5,7 @@ return {
   opts = {
     image = {
       enabled = true,
-      force = true,
+      force = false,
       max_width = 80,
       max_height = 40,
       wo = {

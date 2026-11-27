@@ -91,4 +91,4 @@ hl.bind("SUPER + P", function()
 		hl.monitor({ output = "eDP-1", mirror = "", disabled = true })
 		is_mirrored = false
 	end
-end, { description = "Toggle Mirror / Docked Display" })
+end, { description = "Toggle Mirror / Docked Display", locked = true })

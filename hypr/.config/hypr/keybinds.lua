@@ -12,7 +12,10 @@ hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("copyq toggle"))
 hl.bind("SUPER + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
-hl.bind("SUPER + 0", hl.dsp.exec_cmd("wlogout"))
+hl.bind("SUPER + 0 + S", hl.dsp.exec_cmd("systemctl suspend"), { locked = true })
+hl.bind("SUPER + 0 + R", hl.dsp.exec_cmd("systemctl reboot"), { locked = true })
+hl.bind("SUPER + 0 + P", hl.dsp.exec_cmd("systemctl poweroff"), { locked = true })
+hl.bind("SUPER + 0", hl.dsp.exec_cmd("wlogout"), { locked = true })
 hl.bind(
 	"PRINT",
 	hl.dsp.exec_cmd(

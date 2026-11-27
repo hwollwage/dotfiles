@@ -9,7 +9,7 @@
 ## <p align="center">shabbat shalom b'hatzlacha Avraham 🇮🇱✌️🥹🏳️‍⚧️</p>
 
 <p align="center">
-    <img src=".t4t/jew_of_the_week.png" width="600" ></img>
+    <img src="$HOME/.config/hypr/assets/jew_of_the_week.png" width="600" ></img>
 <p>
 
 ```
