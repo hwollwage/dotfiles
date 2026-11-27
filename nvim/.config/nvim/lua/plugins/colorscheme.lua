@@ -14,6 +14,11 @@ return {
             surface2 = "#F5A9B8",
           },
         },
+        custom_highlights = function(colors)
+          return {
+            WinSeparator = { fg = "#F5A9B8", style = { "bold" } },
+          }
+        end,
       })
     end,
   },

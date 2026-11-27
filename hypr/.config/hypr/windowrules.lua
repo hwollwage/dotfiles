@@ -1,5 +1,5 @@
 --#######################
---###    WINDOW RULES    ####
+--###  WINDOW RULES  ####
 --#######################
 
 -- notifications blur

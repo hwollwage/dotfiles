@@ -49,7 +49,7 @@ eval "$(fzf --bash)"
 # DISABLE TERMINAL BELL
 bind 'set bell-style none'
 
-# EXPORT PATH
+export LS_COLORS="$LS_COLORS:di=01;38;2;91;206;250:fi=00;38;2;255;255;255"
 export HISTTIMEFORMAT="%d %b %H:%M  "
 export HISTSIZE=-1
 export HISTFILESIZE=-1
